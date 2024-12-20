@@ -1,8 +1,11 @@
 {% include 'partials/header.html' %}
 <h1>
-      {{post.title}}
+      {{post.title}} by {{post.username}}
 </h1>
 <p>
       {{post.text}}
 </p>
+{% if post.image %}
+<img src="/{{post.image}}" alt="{{post.title}}" width="200px">
+{% endif %}
 {% include 'partials/footer.html' %}
